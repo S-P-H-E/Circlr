@@ -1,4 +1,4 @@
-import { AiOutlineGoogle } from 'react-icons/Ai'
+import { AiOutlineGoogle } from 'react-icons/ai'
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '@/utils/firebase';
 import { useRouter } from 'next/router';
