@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #1c1b29;
+  --p1-color: #292841;
+  --bt-color: #5865f2; 
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
