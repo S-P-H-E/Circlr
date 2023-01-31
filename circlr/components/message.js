@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function makeUrlClickable(text, options = { linkText: null, target: "_blank", className: "text-blue-500 underline" }) {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const matches = text.match(urlRegex);
+    const matches = text?.match(urlRegex);
   
     if (matches) {
       return matches.map((url) => {
