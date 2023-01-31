@@ -31,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="my-12 text-lg font-medium">
-        <h2 className="text-white text-[40px]">Messages</h2>
+        <h2 className="text-[color:var(--tx-color)] text-[40px]">Messages</h2>
         {allPosts.map((post) => {
           return (
             <Message {...post} key={post.id}>
