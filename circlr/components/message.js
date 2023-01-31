@@ -5,7 +5,7 @@ import profilePhoto from '@/public/images/no-profile-pic.png';
 export default function Message({children, avatar, username, timestamp, description}){
 
     return (
-        <div className="text-white p-8 my-5 rounded-lg shadow-lg bg-[color:var(--p1-color)]">
+        <div className="text-[color:var(--tx-color)] p-8 my-5 rounded-lg shadow-lg bg-[color:var(--p1-color)]">
             <div className="flex items-center gap-2">
                 <img src={avatar} className="w-10 rounded-full"/>
                 <div className="flex space-x-1 items-center">
