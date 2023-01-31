@@ -75,7 +75,7 @@ export default function Post(){
     }, [user, loading]);
 
     return (
-        <div className='my-20 p-8 shadow-lg rounded-lg max-w-md mx-auto text-white bg-[#292841]'>
+        <div className='my-20 p-8 shadow-lg rounded-lg max-w-md mx-auto text-white border-[1px]'>
             <form onSubmit={submitPost}>
                 <h1 className='text-2xl font-bold'>
                     {post.hasOwnProperty('id') ? "Edit your post" : "Create a new post"}
@@ -85,7 +85,7 @@ export default function Post(){
                     <textarea 
                     value={post.description}
                     onChange={(e) => setPost({...post, description: e.target.value})}
-                    className='bg-[#292841] border-[1px] rounded-lg h-52 w-full p-2 text-sm'></textarea>
+                    className='bg-[color:var(--bg-color)] border-[1px] rounded-lg h-52 w-full p-2 text-sm'></textarea>
                     <p className={`font-medium text-sm ${post.description.length > 300 ? "text-red-600" : ""}`}>{post.description.length}/300</p>
                 </div>
                 <button 

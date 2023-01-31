@@ -41,7 +41,7 @@ export default function Details(){
     const getComments = async () => {
         const docRef = doc(db, "posts", routerData.id);
         const unsubscribe = onSnapshot(docRef, (snapshot) => {
-        setAllMessages(snapshot.data().comments);
+        setAllMessages(snapshot.data()?.comments);
         });
         return unsubscribe;
     };
@@ -51,7 +51,7 @@ export default function Details(){
         getComments();
     }, [router.isReady]);
     return(
-        <div>
+        <div className="my-1 max-w-lg mx-auto">
             <Message {...routerData}></Message>
             <div className="my-4">
                 <div className="flex">
@@ -64,10 +64,10 @@ export default function Details(){
                     />
                     <button onClick={submitMessage} className="bg-[color:var(--bt-color)]  text-white py-2 px-4 rounded-lg ml-4">Submit</button>
                 </div>
-                <div className="py-6">
-                    <h2 className="font-bold text-white">Comments</h2>
+                <div className="my-6">
+                    <h2 className="font-bold text-white ">Comments</h2>
                     {allMessage?.map(message => (
-                        <div className="text-white p-4 my-4 border-[1px] rounded-lg shadow-lg" key={message.time}>
+                        <div className="text-white p-4 my-4 border-b-[1px] shadow-lg" key={message.time}>
                             <div className="flex items-center gap-2 mb-4">
                                 <img className="w-10 rounded-full" src={message.avatar} alt="" />
                                 <h2>{message.userName}</h2>

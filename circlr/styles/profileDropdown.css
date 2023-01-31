@@ -1,0 +1,21 @@
+.profileDropdown {
+    position: absolute;
+    top: 7rem;
+    right: 0.7rem;
+    width: 120px;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    background-color: #222220;
+}
+
+.profileDropdown::before{
+    content: '';
+    position: absolute;
+    top: -0.8rem;
+    right: 1.4rem;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    background-color: #222220;
+}
