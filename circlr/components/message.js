@@ -3,22 +3,22 @@ import { MdVerified } from 'react-icons/md';
 import profilePhoto from '@/public/images/no-profile-pic.png';
 import Link from 'next/link';
 
-function makeUrlClickable(text, options = { linkText: null, target: "_blank", className: "text-blue-500 underline" }) {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const matches = text?.match(urlRegex);
+// function makeUrlClickable(text, options = { linkText: null, target: "_blank", className: "text-blue-500 underline" }) {
+//     const urlRegex = /(https?:\/\/[^\s]+)/g;
+//     const matches = text?.match(urlRegex);
   
-    if (matches) {
-      return matches.map((url) => {
-        const linkText = options.linkText || url;
-        return `<a href="${url}" target="${options.target}" class="${options.className}">${linkText}</a>`;
-      }).join("");
-    } else {
-      return `<p>${text}</p>`;
-    }
-}
+//     if (matches) {
+//       return matches.map((url) => {
+//         const linkText = options.linkText || url;
+//         return `<a href="${url}" target="${options.target}" class="${options.className}">${linkText}</a>`;
+//       }).join("");
+//     } else {
+//       return `<p>${text}</p>`;
+//     }
+// }
 
 export default function Message({children, avatar, username, timestamp, description}){
-    const clickableDescription = makeUrlClickable(description);
+    // const clickableDescription = makeUrlClickable(description);
 
     return (
         <div className="text-[color:var(--tx-color)] p-8 my-5 rounded-xl border-[1px] border-gray-600">
@@ -30,7 +30,9 @@ export default function Message({children, avatar, username, timestamp, descript
                 </div>
             </div>
             <div className="py-4">
-                <div dangerouslySetInnerHTML={{ __html: clickableDescription }} />
+                <p>{description}</p>
+                {/* <div dangerouslySetInnerHTML={{ __html: clickableDescription }} /> */}
+
             </div>
             {children}
         </div>

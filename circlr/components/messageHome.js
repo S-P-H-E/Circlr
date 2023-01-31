@@ -3,21 +3,21 @@ import { MdVerified } from 'react-icons/md';
 import profilePhoto from '@/public/images/no-profile-pic.png';
 import Link from 'next/link';
 
-function makeUrlClickable(text) {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const match = text.match(urlRegex);
+// function makeUrlClickable(text) {
+//     const urlRegex = /(https?:\/\/[^\s]+)/g;
+//     const match = text.match(urlRegex);
   
-    if (match) {
-      return text.replace(urlRegex, function(url) {
-        return `<a href="${url}" target="_blank" class="text-[color:var(--hl-color)] underline">${url}</a>`;
-      });
-    } else {
-      return `<p>${text}</p>`;
-    }
-  }
+//     if (match) {
+//       return text.replace(urlRegex, function(url) {
+//         return `<a href="${url}" target="_blank" class="text-[color:var(--hl-color)] underline">${url}</a>`;
+//       });
+//     } else {
+//       return `<p>${text}</p>`;
+//     }
+//   }
   
 export default function MessageIndex({children, avatar, username, timestamp, description}){
-    const clickableDescription = makeUrlClickable(description);
+    // const clickableDescription = makeUrlClickable(description);
 
     return (
       <div className="my-1 max-w-lg mx-auto">
@@ -30,7 +30,8 @@ export default function MessageIndex({children, avatar, username, timestamp, des
                 </div>
             </div>
             <div className="py-4">
-                <div class="text-[color:var(--hl-color)]" dangerouslySetInnerHTML={{ __html: clickableDescription }} />
+                {/* <div class="text-[color:var(--hl-color)]" dangerouslySetInnerHTML={{ __html: clickableDescription }} /> */}
+                <p>{description}</p>
             </div>
             {children}
         </div>
