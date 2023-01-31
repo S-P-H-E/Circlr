@@ -3,19 +3,20 @@ import { MdVerified } from 'react-icons/md';
 import profilePhoto from '@/public/images/no-profile-pic.png';
 import Link from 'next/link';
 
-function makeUrlClickable(text) {
+function makeUrlClickable(text, options = { linkText: null, target: "_blank", className: "text-blue-500 underline" }) {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const match = text.match(urlRegex);
+    const matches = text.match(urlRegex);
   
-    if (match) {
-      return text.replace(urlRegex, function(url) {
-        return `<a href="${url}" target="_blank" class="text-blue-500 underline">${url}</a>`;
-      });
+    if (matches) {
+      return matches.map((url) => {
+        const linkText = options.linkText || url;
+        return `<a href="${url}" target="${options.target}" class="${options.className}">${linkText}</a>`;
+      }).join("");
     } else {
       return `<p>${text}</p>`;
     }
-  }
-  
+}
+
 export default function Message({children, avatar, username, timestamp, description}){
     const clickableDescription = makeUrlClickable(description);
 

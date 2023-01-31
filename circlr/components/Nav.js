@@ -45,7 +45,10 @@ export default function Nav(){
                             <MdGroups className="scale-[1.8]" color="white"/>
                         </Link>
                         {/* Profile */}
-                        <div>
+                        <Link className="font-medium bg-[color:var(--bt-color)] py-2 px-4 rounded-full text-sm h-11 flex items-center" href="/dashboard">
+                            <BiUser className="scale-[1.9]" color="white"/>
+                        </Link>
+                        {/* <div>
                             <button onClick={() => setOpenProfile((prev) => !prev)} className="font-medium bg-[color:var(--bt-color)] py-2 px-4 rounded-full text-sm h-11 flex items-center">
                                 <BiUser className="scale-[1.8]" color="white"/>
                             </button>
@@ -56,7 +59,7 @@ export default function Nav(){
                                 <ProfileDropdown />
                             )
                         }
-                        </div>
+                        </div> */}
                     </div>
                     </>
                 )}
