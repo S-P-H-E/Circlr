@@ -9,12 +9,12 @@ export default function Message({children, avatar, username, timestamp, descript
             <div className="flex items-center gap-2">
                 <img src={avatar} className="w-10 rounded-full"/>
                 <div className="flex space-x-1 items-center">
-                    <h2 className=''>{username}</h2>
+                    <h2 className='font-bold'>{username}</h2>
                     {/* <MdVerified color="#5865f2"/> */}
                 </div>
             </div>
             <div className="py-4">
-                <p>{description}</p>
+                <p className='text-[color:var(--hl-color)]'>{description}</p>
             </div>
             {children}
         </div>
