@@ -14,7 +14,7 @@ export default function Message({children, avatar, username, timestamp, descript
                 </div>
             </div>
             <div className="py-4">
-                <p className='text-[color:var(--hl-color)]'>{description}</p>
+                <p className=''>{description}</p>
             </div>
             {children}
         </div>
