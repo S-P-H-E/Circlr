@@ -46,7 +46,7 @@ export default function Dashboard(){
 
         <div className='text-white'>
             <div className='flex justify-between items-center'>
-                <h1 className='text-[40px] font-medium '>My Posts</h1>
+                <h1 className='text-[40px] font-medium text-[color:var(--accent-color)]'>My Posts</h1>
             </div>
             <div>
 

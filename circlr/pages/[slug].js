@@ -11,7 +11,7 @@ export default function Details(){
     const routerData = router.query;
     const [message, setMessage] = useState('');
     const [allMessage, setAllMessages] = useState([]); 
-
+    
     //Submit a message
     const submitMessage = async() => {
         //Check if the user is logged
@@ -52,7 +52,7 @@ export default function Details(){
         getComments();
     }, [router.isReady]);
     return(
-        <div className="my-1 max-w-lg mx-auto">
+        <div className="my-1 mx-auto">
             <Message {...routerData}></Message>
             <div className="my-4">
                 <div className="flex">
@@ -61,12 +61,12 @@ export default function Details(){
                     type='text' 
                     value={message} 
                     placeholder="Type a comment 💬"
-                    className="bg-[color:var(--p1-color)] w-full p-2 text-white rounded-lg shadow-lg"
+                    className="bg-[#161618] w-full p-2 text-white rounded-lg shadow-lg"
                     />
-                    <button onClick={submitMessage} className="bg-[color:var(--bt-color)]  text-white py-2 px-4 rounded-lg ml-4">Submit</button>
+                    <button onClick={submitMessage} className="bg-[color:var(--accent-color)] text-black py-2 px-4 rounded-lg ml-4">Submit</button>
                 </div>
                 <div className="my-6">
-                    <h2 className="font-bold text-white ">Comments</h2>
+                    <h2 className="font-bold text-white">Comments</h2>
                     {allMessage?.map(message => (
                         <div className="text-white p-4 my-4 border-b-[1px] shadow-lg" key={message.time}>
                             <div className="flex items-center gap-2 mb-4">

@@ -75,9 +75,9 @@ export default function Post(){
     }, [user, loading]);
 
     return (
-        <div className='my-20 p-8 shadow-lg rounded-lg max-w-md mx-auto text-white border-[1px]'>
+        <div className='my-20 p-8 max-w-md mx-auto text-white bg-[#161618] rounded-xl'>
             <form onSubmit={submitPost}>
-                <h1 className='text-2xl font-bold'>
+                <h1 className='text-2xl font-bold text-[color:var(--accent-color)]'>
                     {post.hasOwnProperty('id') ? "Edit your post" : "Create a new post"}
                 </h1>
                 <div className='py-2'>
@@ -85,15 +85,15 @@ export default function Post(){
                     <textarea 
                     value={post.description}
                     onChange={(e) => setPost({...post, description: e.target.value})}
-                    className='bg-[color:var(--bg-color)] border-[1px] rounded-lg h-52 w-full p-2 text-sm'></textarea>
-                    <p className={`font-medium text-sm ${post.description.length > 300 ? "text-red-600" : ""}`}>{post.description.length}/300</p>
+                    className='bg-[#161618] border-[1px] rounded-lg h-52 w-full p-2 text-sm'></textarea>
+                    <p className={`font-medium text-sm ${post.description.length > 20 ? "text-red-600" : ""}`}>{post.description.length}/20</p>
                 </div>
-                <button 
+                {post.description.length > 20 ? null : <button 
                 type="sumbit"
-                
-                className='w-full bg-[color:var(--bt-color)] font-medium rounded-lg align-middle p-2 gap-1 text-white'>
+                className='w-full bg-[var(--accent-color)] font-medium rounded-lg align-middle p-2 gap-1 text-black'>
                     {post.hasOwnProperty('id') ? "Update" : "Submit"}
-                </button>
+                </button>}
+                
             </form>
         </div>
     )
