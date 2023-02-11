@@ -27,3 +27,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+body::-webkit-scrollbar {
+  width: 0.25em;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 0.125em;
+  
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
+body::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
