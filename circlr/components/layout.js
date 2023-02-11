@@ -1,5 +1,4 @@
 import Nav from '@/components/Nav';
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { RiInformationFill } from 'react-icons/ri'
 import { CgClose } from 'react-icons/cg'
