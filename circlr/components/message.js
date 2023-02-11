@@ -1,6 +1,5 @@
 import { Children } from "react";
 import { MdVerified } from 'react-icons/md';
-import profilePhoto from '@/public/images/no-profile-pic.png';
 import Link from 'next/link';
 
 export default function Message({children, avatar, username, timestamp, description}){
