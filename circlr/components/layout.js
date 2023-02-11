@@ -18,7 +18,7 @@ export default function Layout({children}){
     }
  
     useEffect(() => {
-        const NotiVersion = '1.0'
+        const NotiVersion = '0.1'
 
         const show = localStorage.getItem('showNotification');
         const version = localStorage.getItem('version');
