@@ -25,7 +25,7 @@ export default function Message({children, avatar, username, timestamp, descript
     <div className="text-[color:var(--tx-color)] p-8 my-5 rounded-xl bg-[#161618]">
       <div className="flex items-center gap-2">
         <img src={avatar} className="w-10 rounded-full"/>
-        <div className="flex space-x-1 items-center">
+        <div className="flex space-x-1 items-center sm:text-[16px] md:text-[18px]">
           <h2 className='font-bold'>{username}</h2>
           <h1 className="text-gray-500 font-thin"> · {formattedTime}</h1>
         </div>
