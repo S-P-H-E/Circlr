@@ -17,7 +17,7 @@ export default function Layout({children}){
     }
  
     useEffect(() => {
-        const NotiVersion = '0.1'
+        const NotiVersion = '0.2'
 
         const show = localStorage.getItem('showNotification');
         const version = localStorage.getItem('version');
@@ -38,17 +38,16 @@ export default function Layout({children}){
     return (
         <>
         {showNotification === true ? (
-            <div className='flex justify-between items-center border-[1px] border-[#555e6d] bg-gray-900 text-white rounded-lg m-5 p-3'>
+            <div className='flex justify-between items-center border-[1px] border-[#1e7c4f] bg-[#0b2b1b] text-white rounded-lg m-5 p-3'>
             <div className='flex justify-center items-center gap-2'>
-            
                 <div>
                     <div className='flex gap-2'>
-                        <RiInformationFill className='text-[#555e6d]' size={23}/>
+                        <RiInformationFill className='text-[#1e7c4f]' size={23}/>
                         <h1 className='font-bold'>New Update!</h1>
                     </div>
                     <div className='mx-8'>
-                        <p className='text-gray-200 text-sm py-1'>A new way to make posts.</p>
-                            <button onClick={CheckNewFeature} className='bg-[#555e6d] text-white font-medium p-2 rounded-lg border-[1px] border-gray-500 shadow-lg my-3'>Check it out</button>
+                        <p className='text-gray-200 text-sm py-1'>You can now see what time you made a post.</p>
+                        {/* <button onClick={CheckNewFeature} className='bg-[#f8f7ae] text-black font-medium p-2 rounded-lg border-[1px] border-gray-500 shadow-lg my-3'>Check it out</button> */}
                     </div>
                 </div>
             </div>
