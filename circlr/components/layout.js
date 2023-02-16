@@ -38,11 +38,11 @@ export default function Layout({children}){
     return (
         <>
         {showNotification === true ? (
-            <div className='flex justify-between items-center border-[1px] border-[#1e7c4f] bg-[#0b2b1b] text-white rounded-lg m-5 p-3'>
+            <div className='flex justify-between items-center border-[1px] border-[#586ceb] bg-[#151a3a] text-white rounded-lg m-5 p-3'>
             <div className='flex justify-center items-center gap-2'>
                 <div>
                     <div className='flex gap-2'>
-                        <RiInformationFill className='text-[#1e7c4f]' size={23}/>
+                        <RiInformationFill className='text-[#586ceb]' size={23}/>
                         <h1 className='font-bold'>New Update!</h1>
                     </div>
                     <div className='mx-8'>
